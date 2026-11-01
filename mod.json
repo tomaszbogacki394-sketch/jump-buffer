@@ -1,0 +1,36 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081"
+	},
+	"version": "v1.0.0",
+	"id": "Meep.jump-buffer",
+	"name": "Jump Buffer",
+	"developer": "Meep",
+	"description": "Simple cube jump buffer: a press made just before landing fires the moment you land. Settings button on the main menu.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"description": "Turn the buffer on or off.",
+			"default": true
+		},
+		"buffer-ms": {
+			"type": "int",
+			"name": "Buffer window (ms)",
+			"description": "How long before landing a press is remembered. 17 ms is about 1 frame at 60 FPS.",
+			"default": 50,
+			"min": 10,
+			"max": 200,
+			"control": { "slider": true, "input": true, "arrows": true }
+		},
+		"practice-only": {
+			"type": "bool",
+			"name": "Practice mode only",
+			"description": "ON: only buffer in practice mode. OFF: buffer in every run.",
+			"default": false
+		}
+	}
+}
